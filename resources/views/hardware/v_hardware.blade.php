@@ -34,7 +34,7 @@
                 <tr>
                     <td>{{$no++}}</td>
                     <td>{{$data->nama_hw}}</td>
-                    <td>{{$data->merk_hw}}</td>
+                    <td>{{$data->id_merk_hw}}</td>
                     <td>{{$data->seri_hw}}</td>
                     <td>{{$data->id_kategori_hw}}</td>
                     <td>

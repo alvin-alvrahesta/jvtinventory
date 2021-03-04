@@ -23,9 +23,9 @@
 							</div>
 							<div class="form-group">
 								<label>Merk Hardware</label>
-								<input name="merk_hw" class="form-control" value="{{ old('merk_hw') }}">
+								<input name="id_merk_hw" class="form-control" value="{{ old('id_merk_hw') }}">
 								<div class="text-danger">
-									@error('merk_hw')
+									@error('id_merk_hw')
 										{{ $message }}
 									@enderror
 								</div>
@@ -43,11 +43,12 @@
 								<label>Kategori</label>
 								<select name="id_kategori_hw" class="form-control select2" style="width: 100%;">
 									<option value="">{{ old('id_kategori_hw') }}</option>
-									<option>Workstations</option>
-									<option>Server</option>
-									<option>Printer</option>
-									<option>Sparepart</option>
-									<option>Other</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
 								</select>
 								<div class="text-danger">
 									@error('id_kategori_hw')
@@ -73,14 +74,14 @@
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label>Lokasi</label>
-								<select name="lokasi" class="form-control select2" style="width: 100%;" >
-									<option value="">{{ old('lokasi') }}</option>
-									<option>R. Staf</option>
-									<option>R. Tamu</option>
-									<option>R. Security</option>
-									<option>R. Server</option>
-									<option>R. Dapur</option>
-									<option>R. Gudang</option>
+								<select name="id_lokasi" class="form-control select2" style="width: 100%;" >
+									<option value="">{{ old('id_lokasi') }}</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
 								</select>
 								<div class="text-danger">
 									@error('lokasi')
@@ -90,16 +91,17 @@
 							</div>
 							<div class="form-group">
 								<label>Departemen</label>
-								<select name="departemen" class="form-control select2" style="width: 100%;">
-									<option value="">{{ old('departemen') }}</option>
-									<option>Infrastruktur</option>
-									<option>Software</option>
-									<option>Administrasi</option>
-									<option>K3</option>
-									<option>HRD</option>
+								<select name="id_departemen" class="form-control select2" style="width: 100%;">
+									<option value="">{{ old('id_departemen') }}</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
 								</select>
 								<div class="text-danger">
-									@error('departemen')
+									@error('id_departemen')
 										{{ $message }}
 									@enderror
 								</div>
@@ -138,6 +140,10 @@
 									<option value="">{{ old('id_pemakai') }}</option>
 									<option>1</option>
 									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+									<option>6</option>
 								</select>
 								<div class="text-danger">
 									@error('id_pemakai')

@@ -24,9 +24,9 @@
 							</div>
 							<div class="form-group">
 								<label>Merk Hardware</label>
-								<input name="merk_hw" class="form-control" value="{{ $hardware->merk_hw }}">
+								<input name="id_merk_hw" class="form-control" value="{{ $hardware->id_merk_hw }}">
 								<div class="text-danger">
-									@error('merk_hw')
+									@error('id_merk_hw')
 										{{ $message }}
 									@enderror
 								</div>
@@ -69,8 +69,8 @@
 						<div class="col-sm-6">
 							<div class="form-group">
 								<label>Lokasi</label>
-								<select name="lokasi" class="form-control select2" style="width: 100%;" >
-									<option value="">{{ $hardware->lokasi }}</option>
+								<select name="id_lokasi" class="form-control select2" style="width: 100%;" >
+									<option value="">{{ $hardware->id_lokasi }}</option>
 									<option>R. Staf</option>
 									<option>R. Tamu</option>
 									<option>R. Security</option>
@@ -79,15 +79,15 @@
 									<option>R. Gudang</option>
 								</select>
 								<div class="text-danger">
-									@error('lokasi')
+									@error('id_lokasi')
 										{{ $message }}
 									@enderror
 								</div>
 							</div>
 							<div class="form-group">
 								<label>Departemen</label>
-								<select name="departemen" class="form-control select2" style="width: 100%;">
-									<option value="">{{ $hardware->departemen }}</option>
+								<select name="id_departemen" class="form-control select2" style="width: 100%;">
+									<option value="">{{ $hardware->id_departemen }}</option>
 									<option>Infrastruktur</option>
 									<option>Software</option>
 									<option>Administrasi</option>
@@ -95,7 +95,7 @@
 									<option>HRD</option>
 								</select>
 								<div class="text-danger">
-									@error('departemen')
+									@error('id_departemen')
 										{{ $message }}
 									@enderror
 								</div>

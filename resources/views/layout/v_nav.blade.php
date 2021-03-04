@@ -24,8 +24,8 @@
                 <i class="fa fa-cloud"></i> <span>Software</span>
               </a>                
             </li>
-            <li class="{{ (request()->is('user/*')) ? 'active' : '' }}">
-              <a href="/user/index/">
+            <li class="treeview {{ (request()->is('user/*')) ? 'active' : '' }}">
+              <a href="/user">
                 <i class="glyphicon glyphicon-user"></i> <span>User</span>
                 <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>

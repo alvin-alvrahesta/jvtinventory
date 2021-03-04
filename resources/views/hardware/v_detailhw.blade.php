@@ -17,7 +17,7 @@
 					<tr>
 						<th width="200px">Merk Hardware</th>
 						<th width="20px">:</th>
-						<th>{{ $hardware->merk_hw }}</th>
+						<th>{{ $hardware->id_merk_hw }}</th>
 					</tr>
 					<tr>
 						<th width="200px">Seri Hardware</th>
@@ -37,12 +37,12 @@
 					<tr>
 						<th width="200px">Lokasi</th>
 						<th width="20px">:</th>
-						<th>{{ $hardware->lokasi }}</th>
+						<th>{{ $hardware->id_lokasi }}</th>
 					</tr>
 					<tr>
 						<th width="200px">Departemen</th>
 						<th width="20px">:</th>
-						<th>{{ $hardware->departemen }}</th>
+						<th>{{ $hardware->id_departemen }}</th>
 					</tr>
 					<tr>
 						<th width="200px">Tanggal Beli</th>

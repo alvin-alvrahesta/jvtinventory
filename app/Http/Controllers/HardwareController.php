@@ -57,45 +57,52 @@ class HardwareController extends Controller
     public function insert()
     {
         Request()->validate([
-            'nama_hw' => 'required',
-            'merk_hw' => 'required',
+            'id_nama_hw' => 'required',
+            'id_merk_hw' => 'required',
             'seri_hw' => 'required',
             'id_kategori_hw' => 'required',
+            'kode_asset' => 'required',
+            'id_kondisi' => 'required',
             'harga_hw' => 'required|numeric',
-            'lokasi' => 'required',
-            'departemen' => 'required',
+            'id_lokasi' => 'required',
+            'id_departemen' => 'required',
             'tgl_beli_hw' => 'required',
             'tgl_batas_garansi' => 'required',
+            'deskripsi_hw' => 'required',
             'id_pemakai' => 'required'
         ],[
-            'nama_hw.required' => 'Nama Hardware wajib diisi',
-            'merk_hw.required' => 'Merk Hardware wajib diisi',
+            'id_nama_hw.required' => 'Nama Hardware wajib diisi',
+            'id_merk_hw.required' => 'Merk Hardware wajib diisi',
             'seri_hw.required' => 'Seri Hardware wajib diisi',
             'id_kategori_hw.required' => 'Kategori wajib diisi',
+            'kode_asset.required' => 'Kode Asset wajib diisi',
             'harga_hw.required' => 'Harga Hardware wajib diisi',
             'harga_hw.numeric' => 'Harga Hardware berupa angka',
-            'lokasi.required' => 'Lokasi wajib diisi',
-            'departemen.required' => 'Departemen wajib diisi',
+            'id_lokasi.required' => 'id_Lokasi wajib diisi',
+            'id_departemen.required' => 'id_Departemen wajib diisi',
             'tgl_beli_hw.required' => 'Tanggal Beli Hardware wajib diisi',
             'tgl_batas_garansi.required' => 'Tanggal Batas Garansi Hardware wajib diisi',
             'id_pemakai.required' => 'Pemakai wajib diisi'
         ]);
         
         $data=[
-            'nama_hw' => Request()->nama_hw,
-            'merk_hw' => Request()->merk_hw,
+            'id_nama_hw' => Request()->id_nama_hw,
+            'id_merk_hw' => Request()->id_merk_hw,
             'seri_hw' => Request()->seri_hw,
             'id_kategori_hw' => Request()->id_kategori_hw,
+            'kode_asset' => Request()->kode_asset,
+            'id_kondisi' => Request()->id_kondisi,
             'harga_hw' => Request()->harga_hw,
-            'lokasi' => Request()->lokasi,
-            'departemen' => Request()->departemen,
+            'id_lokasi' => Request()->id_lokasi,
+            'id_departemen' => Request()->id_departemen,
             'tgl_beli_hw' => Request()->tgl_beli_hw,
             'tgl_batas_garansi' => Request()->tgl_batas_garansi,
+            'deskripsi_hw' => Request()->deskripsi_hw,
             'id_pemakai' => Request()->id_pemakai            
         ];
         
         $this->HardwareModel->addData($data);
-        return redirect()->route('hardware')->with('pesan', 'Data berhasil ditambahkan.');
+        return redirect()->route('hardware.v_hardware')->with('pesan', 'Data berhasil ditambahkan.');
 
     }
     
@@ -114,8 +121,8 @@ class HardwareController extends Controller
     public function update($id_hw)
     {
         Request()->validate([
-            'nama_hw' => 'required',
-            'merk_hw' => 'required',
+            'id_nama_hw' => 'required',
+            'id_merk_hw' => 'required',
             'seri_hw' => 'required',
 
             'id_kategori_hw' => 'required',
@@ -124,8 +131,8 @@ class HardwareController extends Controller
             'tgl_beli_hw' => 'required',
             'tgl_batas_garansi' => 'required'
         ],[
-            'nama_hw.required' => 'Nama Hardware wajib diisi',
-            'merk_hw.required' => 'Merk Hardware wajib diisi',
+            'id_nama_hw.required' => 'Nama Hardware wajib diisi',
+            'id_merk_hw.required' => 'Merk Hardware wajib diisi',
             'seri_hw.required' => 'Seri Hardware wajib diisi',
             'id_kategori_hw.required' => 'Kategori Hardware wajib diisi',
             'harga_hw.required' => 'Harga Hardware wajib diisi',
@@ -135,8 +142,8 @@ class HardwareController extends Controller
         ]);
         
         $data=[
-            'nama_hw' => Request()->nama_hw,
-            'merk_hw' => Request()->merk_hw,
+            'id_nama_hw' => Request()->id_nama_hw,
+            'id_merk_hw' => Request()->id_merk_hw,
             'seri_hw' => Request()->seri_hw,
             'id_kategori_hw' => Request()->id_kategori_hw,
             'harga_hw' => Request()->harga_hw,
